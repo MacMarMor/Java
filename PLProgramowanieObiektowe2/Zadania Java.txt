@@ -1,0 +1,31 @@
+Laboratorium
+
+1. Napisz program czytajacy argumenty wywolania programu i konwertujacy je do Integer. Zmodyfikuj program w ten sposob, aby kolejne argumenty byly wspolczynikami wielomianu postaci Ax2+Bx+C=0. Policz pierwiastki tego wielomianu.
+
+2. Napisz program, ktory pobiera dwie liczby oraz lancuch znakow z wiersza polecen oraz wyswietla fragment podanego lancucha okreslony wprowadzonymi liczbami. Na przyklad:
+java Substring Witaj 2 4
+powinien wyswietlic:
+taj
+Obsluz wszystkie mozliwe wyjatki, ktore moga wystapic w przypadku zlego zestawu argumentow.
+
+3. Napisz program losujacy liczbe z zakresu 0-100. Nastepnie program pyta sie uzytkownika, co to za liczba. Jezeli uzytkownik nie zgadl, dowiaduje sie czy wylosowana liczba jest wieksza czy mniejsza od podanej. Jezeli zgadl, dowiaduje sie ile wykonal prob i jest pytany o ochote do dalszej gry.
+
+4. Napisz program losujacy 1000 znakow i zapisz je do pliku, a nastepnie odczytaj pliku i wypisz na ekran. Utworz dwie rozne pary procedur zapisujaco/odczytujacych, raz korzystajac z pakietu java.io a drugi raz z pakietu java.nio. Porownaj szybkosc zapisu i odczytu, wynik wypisz na ekranie.
+
+5. Napisz program odczytujacy zawartosc pliku tekstowego. Sciezka do pliku powinna byc podawana przez uzytkownika po uruchomieniu programu oraz zapisywana do osobnego pliku. Po nacisniÄciu dowolnego klawisza program pobiera kolejny ciÄg znakow o losowej dlugosci (od 1 do 5 znakow) z wczytanego pliku tekstowego i wyswietla go na ekranie.
+
+6. Napisz program proszacy o podanie 2 wektorow (wektor to ciag liczb). Koniec wektora oznacza sie za pomoca wcisniecia klawisza enter. Jezeli podany ciag nie jest liczba, jest ignorowany. Nastepnie nalezy sprobowac dodac wektory, jezeli sa rownej dlugosci. Jezeli nie, sa, rzucany jest wlasny wyjatek WektoryRoznejDlugosciException, za pomoca ktorego mozna podac a nastepnie odczytac dlugosci tych wektorow (nalezy tak skonstruowac wyjatek, aby mozliwe bylo skonstruowanie zdania po jego przechwyceniu : "Dlugosc pierwszego wektora to AA a drugiego to BB). Jezeli sa rownej dlugosci, wynik dodawania zapisywany jest do pliku. Jezeli nie sa rownej dlugosci, uzytkownik jest proszony o ponowne wprowadzenie tych wektorow.
+
+7. Napisz klase NrTelefoniczny, posiadajaca 2 pola: nrkierunkowy i nrTelefonu i implementujaca interfejs Comparable. Nastepnie utworz abstrakcyjna klase Wpis a nastepnie dziedziczace z niej klasy Osoba i Firma. Klasa Wpis ma abstrakcyjna metode opis, ktora opisuje dany wpis. Byc moze ma rowniez inne metody abstrakcyjne lub nie w miare potrzeb. Klasa Osoba ma zawierac informacje o imieniu, nazwisku, adresie i (w tym nrTelefonu). Klasa Firma ma miec nazwe i adres( w tym NrTelefonu). Utworz kilka obiektow klasy Osoba i kilka obiektow klasy Firma i umiesc je w kontenerze TreeMap, poslugujac sie jako kluczem numerem telefonicznym. Nastepnie wypisz utworzona w ten sposob ksiazke telefoniczna za pomoca iteratora.
+
+8. Napisz program sieciowy (aplikacja kliencka + aplikacja serwerowa) sluzacy do kolejkowania i wysylania notyfikacji. Program powinien obslugiwac domyslne wyjatki oraz implementacje przynajmniej jednego wyjatku zwiazanego z walidacja tresci wprowadzanych przez uzytkownika w aplikacji klienckiej.
+
+Funkcje aplikacji klienckiej:
+- Polaczenie z serwerem wraz z walidacja i obsluga wyjatkow
+- Pobranie od uzytkownika tresci notyfikacji (wiadomosc tekstowa) oraz czasu odeslania notyfikacji do uzytkownika
+- Wyswietlenie otrzymanej przez serwer notyfikacji
+
+Funkcje aplikacji serwerowej:
+- Obsluga wielu klientow jednoczesnie
+- Przyjmowanie wyslanych z aplikacji klienckiej notyfikacji i kolejkowanie ich na serwerze
+- Wysylanie notyfikacji do klienta ktory ja zapisal o podanym przez niego czasie
